@@ -17,5 +17,15 @@ export const options = {
         };
       },
     }),
+    GoogleProvider({
+      profile(profile) {
+        console.log('Profile Google: ', profile);
+        return {
+          ...profile,
+          id: profile.sub,
+          role: userRole,
+        };
+      },
+    }),
   ],
 };

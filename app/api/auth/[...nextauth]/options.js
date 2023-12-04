@@ -1,5 +1,5 @@
-import GithubProvider from 'next-auth/provider/github';
-import GoogleProvider from 'next-auth/provider/google';
+import GithubProvider from 'next-auth/providers/github';
+import GoogleProvider from 'next-auth/providers/google';
 
 export const options = {
   providers: [

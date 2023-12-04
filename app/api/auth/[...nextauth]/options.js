@@ -6,6 +6,15 @@ export const options = {
     GithubProvider({
       profile(profile) {
         console.log('Profile Github: ', profile);
+
+        let userRole = 'Github User';
+        if (profile?.email === 'tin.jurcevic@gmail.com') {
+          userRole = 'admin';
+        }
+        return {
+          ...profile,
+          role: userRole,
+        };
       },
     }),
   ],

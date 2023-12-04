@@ -1,5 +1,12 @@
-import NextAuth from 'next-auth';
-import { options } from './options';
+import GithubProvider from 'next-auth/provider/github';
+import GoogleProvider from 'next-auth/provider/google';
 
-const handler = NextAuth(options);
-export { handler as GET, handler as POST };
+export const options = {
+  providers: [
+    GithubProvider({
+      profile(profile) {
+        console.log('Profile Github: ', profile);
+      },
+    }),
+  ],
+};

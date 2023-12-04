@@ -16,6 +16,8 @@ export const options = {
           role: userRole,
         };
       },
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
     }),
     GoogleProvider({
       profile(profile) {
@@ -26,6 +28,8 @@ export const options = {
           role: userRole,
         };
       },
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
     }),
   ],
 };
